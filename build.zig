@@ -112,6 +112,6 @@ pub fn build(b: *std.Build) !void {
     wasm.entry = .disabled;
     wasm.rdynamic = true;
     wasm.import_symbols = true;
-    const i = b.addInstallBinFile(wasm.getEmittedBin(), "../../web/lib.wasm");
+    const i = b.addInstallBinFile(wasm.getEmittedBin(), "../../docs/lib.wasm");
     b.getInstallStep().dependOn(&i.step);
 }

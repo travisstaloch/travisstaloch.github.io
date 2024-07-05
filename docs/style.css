@@ -1,0 +1,116 @@
+.container {
+    min-width: 96vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+header * {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding-top: 0;
+}
+
+th {
+    text-align: center;
+}
+
+td,
+th {
+    border: 0;
+}
+
+
+label {
+    margin-bottom: 0;
+}
+
+th,
+tr,
+td,
+table {
+    padding: 0;
+    margin: 0;
+}
+
+
+th {
+    padding: 0px;
+}
+
+button {
+    padding: 0 0.5rem;
+}
+
+#input,
+#output {
+    white-space: pre;
+    font: 20px/1.5em 'Consolas', 'Menlo', 'Monaco', 'Courier New', monospace;
+    resize: vertical;
+    height: 80vh;
+    overflow: scroll;
+    overflow-x: scroll;
+    tab-size: 4;
+    margin: 0;
+    padding: 0;
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+#input:empty:before {
+    content: attr(data-placeholder)
+}
+
+#input {
+    border-right: 2px solid #AAA;
+}
+
+
+.thead {
+    border: 2px solid var(--pico-primary-focus);
+    border-radius: 5rem;
+}
+
+.thead th {
+    padding: 0.2rem;
+}
+
+.thead-text {
+    font-size: xx-large;
+}
+
+
+#json-th.err {
+    background-color: var(--pico-color-red-800);
+}
+
+#json-th {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.font-size-h1 {
+    font-size: 2rem;
+    line-height: 1.125;
+    /* typography-spacing-top: 3rem; */
+}
+
+.title {
+    margin: 1rem;
+}
+
+/* Light color scheme (Default) */
+/* Can be forced with data-theme="light" */
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+    #json-th.err {
+        background-color: var(--pico-color-red-300);
+    }
+
+}
