@@ -37,6 +37,7 @@ function parseJson(ev) {
     plen,
     document.getElementById("debug-json").checked,
     document.getElementById("dump-schema").checked,
+    document.getElementById("add-test").checked,
   );
 
   if (outptr == 0) {
@@ -74,6 +75,7 @@ window.addEventListener("load", () => {
   document.getElementById("copy-btn").addEventListener("click", copyBtnClick);
   document.getElementById("debug-json").addEventListener("change", parseJson);
   document.getElementById("dump-schema").addEventListener("change", parseJson);
+  document.getElementById("add-test").addEventListener("change", parseJson);
   // Init
   themeSwitcher.init();
 });
