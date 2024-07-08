@@ -38,7 +38,22 @@
         </nav>
       </div>
     </div>
-
+  </header>
+  <header class="container">
+    <table style="margin-left:1rem; margin-bottom: 1rem;">
+      <tr>
+        <td style="width:0; white-space:nowrap;">
+          <h5 style="margin-right:1rem;">Input:</h5>
+        </td>
+        <td>A json document.</td>
+      </tr>
+      <tr>
+        <td style="width:0; white-space:nowrap;">
+          <h5 style="margin-right:1rem;">Output:</h5>
+        </td>
+        <td>A zig type capable of parsing input when provided to a <code>std.json.parse()</code> method.</td>
+      </tr>
+    </table>
   </header>
   <!-- ./ Header -->
   <!-- Main -->
@@ -53,18 +68,18 @@
                 <th style="width: 20%; text-align: center;"><span class="thead-text">zig</span></th>
                 <th>
                   <small><label for="debug-json"
-                      title="Make a debugging parser which adds a jsonParse() method to each struct that prints field names as they are parsed."><input
-                        type="checkbox" id="debug-json" />Debug Json</label></small>
+                      title="Output a debugging parser with a jsonParse() method in each struct that prints field names as they are parsed."><input
+                        type="checkbox" role="switch" id="debug-json" />Debug Json</label></small>
 
                 </th>
                 <th>
-                  <small><label title="Print schema json instead of generating zig code."><input type="checkbox"
-                        id="dump-schema" />Dump Schema</label>
+                  <small><label title="Output a test with a std.json parsing skeleton after Root."><input
+                        type="checkbox" role="switch" id="add-test" />Add Test</label>
                   </small>
                 </th>
                 <th>
-                  <small><label title="Add a test parsing skeleton to output."><input type="checkbox"
-                        id="add-test" />Add Test</label>
+                  <small><label title="Print schema json instead of generating zig code."><input type="checkbox"
+                        role="switch" id="dump-schema" />Dump Schema</label>
                   </small>
                 </th>
                 <th>
