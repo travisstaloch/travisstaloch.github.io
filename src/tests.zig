@@ -172,6 +172,18 @@ test "optional 2" {
     , s);
 }
 
+test "optional" {
+    const f = try std.fs.cwd().openFile(build_options.schema_path_8, .{});
+    defer f.close();
+    const s = try f.readToEndAlloc(talloc, 1024);
+    defer talloc.free(s);
+    try testing.expectEqualStrings(
+        \\const std = @import("std");
+        \\pub const Root = []const ?i64;
+        \\
+    , s);
+}
+
 const std = @import("std");
 const testing = std.testing;
 const json = std.json;
