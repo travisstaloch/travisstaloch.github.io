@@ -37,6 +37,7 @@ function parseJson(ev) {
     plen,
     document.getElementById("debug-json").checked,
     document.getElementById("dump-schema").checked,
+    document.getElementById("input-schema").checked,
     document.getElementById("add-test").checked,
   );
 
